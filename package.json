@@ -1,0 +1,32 @@
+{
+  "name": "my-gulp-template",
+  "version": "0.0.1",
+  "description": "simple gulp project template for react stuff",
+  "main": "gulpfile.js",
+  "README": "REAMDE",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dan branton",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.0",
+    "browserify": "^12.0.1",
+    "gulp": "^3.8.10",
+    "gulp-notify": "^2.1.0",
+    "gulp-util": "^3.0.1",
+    "pretty-hrtime": "^1.0.1",
+    "reactify": "^1.1.1",
+    "require-dir": "^0.3.0",
+    "underscore": "^1.7.0",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^3.6.1"
+  },
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  }
+}
