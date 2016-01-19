@@ -1,12 +1,12 @@
 import React from 'react';
 
-const MyApp = React.createClass({
+class MyApp extends React.Component {
 
   render() {
     return (
-      <div>{this.props.name}</div>
+      <div className="MyApp">{this.props.name}</div>
     );
   }
-});
+}
 
 export default MyApp;
