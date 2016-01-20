@@ -1,18 +1,14 @@
-var gulp = require('gulp');
-var config = require('../config');
+var gulp   = require('gulp');
 var mocha = require('gulp-mocha');
-var gutil = require('gulp-util');
-var jsdom = require('jsdom');
+var config = require('../config');
 
-global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
-global.window = document.parentWindow;
 
-gulp.task('mocha', function() {
-    return gulp.src(['test/*.js'], { read: false })
-        .pipe(mocha({ reporter: 'list' }))
-        .on('error', gutil.log);
+gulp.task('mocha', () => {
+  require('babel-core/register');
+  return gulp.src('test/**/*.js', {read: false})
+    .pipe(mocha());
 });
 
-gulp.task('test', function() {
-    gulp.watch(['src/**', 'test/**'], ['mocha']);
+gulp.task('test',['mocha'], function() {
+  gulp.watch(['src/app/**/*.js','test/**/*.js'], ['mocha']);
 });
